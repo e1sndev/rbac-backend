@@ -9,4 +9,4 @@ require __DIR__ . '/shared.php';
  */
 Route::apiResource('tenants', TenantController::class, [
     'only' => ['index', 'store', 'destroy']
-]);
+])->middleware('auth:sanctum');

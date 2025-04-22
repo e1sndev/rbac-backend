@@ -50,11 +50,10 @@ class TenantController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Tenant $tenant)
     {
-        Gate::authorize('delete', Tenant::class);
+        Gate::authorize('delete', $tenant);
 
-        $tenant = Tenant::findOrFail($id);
         $tenant->delete();
 
         return response()->json([

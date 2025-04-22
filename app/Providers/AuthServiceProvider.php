@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Policies\PermissionPolicy;
 use App\Policies\RolePolicy;
 use App\Policies\TenantPolicy;
+use App\Policies\UserPolicy;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
