@@ -39,7 +39,7 @@ class TenantController extends Controller
         Gate::authorize('create', Tenant::class);
 
         $data = $request->validate([
-            'id' => 'required|alpha_dash|max:255|unique:tenants',
+            'id' => 'required|alpha_dash|max:255|unique:tenants|min:3',
         ]);
 
         $tenant = Tenant::create($data);
